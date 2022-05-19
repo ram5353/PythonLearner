@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Mail Merge Project Start/.idea/Mail Merge Project Start.iml" filepath="$PROJECT_DIR$/Mail Merge Project Start/.idea/Mail Merge Project Start.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/PythonLearner.iml" filepath="$PROJECT_DIR$/.idea/PythonLearner.iml" />
       <module fileurl="file://$PROJECT_DIR$/PythonOops/.idea/PythonOops.iml" filepath="$PROJECT_DIR$/PythonOops/.idea/PythonOops.iml" />
       <module fileurl="file://$PROJECT_DIR$/quiz-game-start/.idea/quiz-game-start.iml" filepath="$PROJECT_DIR$/quiz-game-start/.idea/quiz-game-start.iml" />
