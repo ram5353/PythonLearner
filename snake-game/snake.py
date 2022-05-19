@@ -7,7 +7,6 @@ LEFT = 180
 RIGHT = 0
 
 
-
 class Snake:
 
     def __init__(self):
@@ -18,13 +17,19 @@ class Snake:
 
     def create_snake(self):
         for i in range(3):
-            new_turtle = Turtle()
-            new_turtle.color("white")
-            new_turtle.shape("square")
-            new_turtle.penup()
-            new_turtle.goto(self.start, 0)
-            self.all_snakes.append(new_turtle)
-            self.start -= 20
+            self.add_turtle()
+
+    def add_turtle(self):
+        new_turtle = Turtle()
+        new_turtle.color("white")
+        new_turtle.shape("square")
+        new_turtle.penup()
+        new_turtle.goto(self.start, 0)
+        self.all_snakes.append(new_turtle)
+        self.start -= 20
+
+    def extend(self):
+        self.add_turtle()
 
     def move(self):
         for position in range(len(self.all_snakes) - 1, 0, -1):
@@ -48,8 +53,3 @@ class Snake:
     def right(self):
         if self.head.heading() != LEFT:
             self.head.setheading(RIGHT)
-
-
-
-
-
