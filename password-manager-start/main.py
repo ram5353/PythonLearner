@@ -1,5 +1,6 @@
 from tkinter import *
 from random import *
+from tkinter import messagebox
 
 FONT_NAME = "Courier"
 
@@ -30,10 +31,16 @@ def random_generate_password():
 
 
 def save():
-    with open("passwords.txt", mode="a") as file:
-        file.write(f"{website_entry.get()} | {email_entry.get()} | {password_entry.get()}\n")
-        website_entry.delete(0, END)
-        password_entry.delete(0, END)
+    if len(website_entry.get()) == 0 or len(password_entry.get()) == 0:
+        messagebox.showinfo(title="information", message="please do not leave any fields empty")
+    else:
+        is_ok = messagebox.askokcancel(title=website_entry.get(),
+                                       message=f"These are the details entered\n""Email: {email_entry.get()}\n""Password: {password_entry.get()}")
+        if is_ok:
+            with open("passwords.txt", mode="a") as file:
+                file.write(f"{website_entry.get()} | {email_entry.get()} | {password_entry.get()}\n")
+                website_entry.delete(0, END)
+                password_entry.delete(0, END)
 # ---------------------------- UI SETUP ------------------------------- #
 
 
