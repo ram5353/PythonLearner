@@ -1,6 +1,3 @@
-# arr[] = [2,3,7,8,10]
-# sum = 11 
-
 def subsetSum(arr, sum):
     n = len(arr)
     return recursive(arr, n, sum)
@@ -30,11 +27,6 @@ def subsetSumMemoization(arr, sum):
                 subset[i][j] = subset[i-1][j] or subset[i-1][j-arr[i-1]]
     return subset[n][sum]
     
-
-
-
-
-
 print(subsetSum([3, 34, 4, 12, 5, 2], 9))
-print(subsetSumMemoization([3, 34, 4, 12, 5, 2], 9))
+print(subsetSumMemoization([1,2,3,4,5], 10))
 
